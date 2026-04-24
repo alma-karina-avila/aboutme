@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alma Karina Avila Macias</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Sección de foto personal */
+        .photo-section {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid white;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 48px rgba(0,0,0,0.3);
+        }
+
+        /* Primera sección - Header */
+        .header-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .profile-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .professional-title {
+            font-size: 1.3em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* Segunda sección - Información de contacto */
+        .contact-section {
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+            color: black;
+            padding: 30px 20px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            /*filter: brightness(0) invert(1);*/
+        }
+
+        .contact-text {
+            font-size: 1.1em;
+        }
+
+        .contact-link {
+            color: rgb(11, 68, 56);
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(255,255,255,0.5);
+            transition: border-bottom 0.3s ease;
+        }
+
+        .contact-link:hover {
+            border-bottom: 1px solid white;
+        }
+
+        /* Tercera sección - Redes sociales */
+        .social-section {
+           background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .social-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .social-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            cursor: pointer;
+            min-width: 120px;
+        }
+
+        .social-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+            filter: brightness(0) invert(1);
+        }
+
+        .social-label {
+            font-weight: 500;
+            font-size: 1em;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .profile-name {
+                font-size: 2em;
+            }
+            
+            .professional-title {
+                font-size: 1.1em;
+            }
+            
+            .social-items {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-item {
+                width: 100%;
+                max-width: 200px;
+            }
+            
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sección de foto personal -->
+        <section class="header-section">
+            <img src="images/profile-photo.png" alt="Foto de Alma Karina" class="profile-photo">
+        <!-- Primera sección: Header -->
+            <h1 class="profile-name">Alma Karina Avila Macias</h1>
+            <h2 class="professional-title">Desarrollador Full Stack, Backend Software Engineer, Java, Desarrollo a la medida </h2>
+        </section>
+
+        <!-- Segunda sección: Información de contacto -->
+        <section class="contact-section">
+            <h3 class="section-title">Información de Contacto</h3>
+            
+            <div class="contact-item">
+                <img src="images/phone-icon.svg" alt="Teléfono" class="icon">
+                <span class="contact-text">+52 442 386 9632</span>
+            </div>
+            
+            <div class="contact-item">
+                <img src="images/email-icon.svg" alt="Email" class="icon">
+                <span class="contact-text">
+                    <a href="mailto:avilamacias.ak@gmail.com" class="contact-link">avilamacias.ak@gmail.com</a>
+                </span>
+            </div>
+            
+            <div class="contact-item">
+                <img src="images/pdf-icon.svg" alt="Descargar CV" class="icon">
+                <span class="contact-text">
+                    <a href="https://1drv.ms/b/c/f571c5400e8840cf/IQCmdZgqmwHgTo_EQAft3d6lAbdX909twB2dhuC9m-_hvnk?e=RmFlQU" target="_blank" class="contact-link">CV Alma Karina Avila Macias</a>
+                </span>
+            </div>
+            
+            <div class="contact-item">
+                <img src="images/location-icon.svg" alt="Ubicación" class="icon">
+                <span class="contact-text">Querétaro, MX</span>
+            </div>
+        </section>
+
+        <!-- Tercera sección: Redes sociales -->
+        <section class="social-section">
+            <h3 class="section-title">Conecta Conmigo</h3>
+            
+            <div class="social-items">
+                <div class="social-item" onclick="window.open('https://linkedin.com/in/alma-karina-avila', '_blank')">
+                    <img src="images/linkedin-icon.svg" alt="LinkedIn" class="social-icon">
+                    <span class="social-label">LinkedIn</span>
+                </div>
+                
+                <div class="social-item" onclick="window.open('https://github.com/alma-karina-avila', '_blank')">
+                    <img src="images/github-icon.svg" alt="GitHub" class="social-icon">
+                    <span class="social-label">GitHub</span>
+                </div>
+                
+                <div class="social-item" onclick="window.open('https://wa.me/4423869632', '_blank')">
+                    <img src="images/whatsapp-icon.svg" alt="WhatsApp" class="social-icon">
+                    <span class="social-label">WhatsApp</span>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
