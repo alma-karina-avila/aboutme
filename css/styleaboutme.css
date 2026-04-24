@@ -20,7 +20,7 @@ body {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid rgb(104, 228, 176);
+    border: 6px solid rgb(255, 255, 255);
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
     margin: 0 auto;
     display: block;
@@ -34,7 +34,7 @@ body {
 /* Primera sección - Header */
 .header-section {
     background: #764ba2;
-    color: rgb(104, 228, 176);
+    color: rgb(0, 0, 0);
     padding: 40px 20px;
     text-align: center;
 }
@@ -43,13 +43,16 @@ body {
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 10px;
-    
+    color: #ffffff;
+    font-style: italic;
 }
 
 .professional-title {
     font-size: 1.8em;
     font-weight: 300;
     opacity: 0.9;
+    color: #e0dede;
+    font-weight: 500;
 }
 
 /* Segunda sección - Información de contacto */
@@ -62,7 +65,7 @@ body {
 .section-title {
     font-size: 1.8em;
     font-weight: bold;
-    color: #91f3da;;
+    color: #ffffff;
     margin-bottom: 20px;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
@@ -82,17 +85,25 @@ body {
     transform: translateY(-2px);
 }
 
-.icon {
+.icon-container {
     width: 50px;
     height: 50px;
     margin-right: 20px;
-    padding: 12px;
-    background: #b5b5b6;
+    background: #333;
     border-radius: 50%;
     box-shadow: 0 4px 12px rgba(118, 75, 162, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.icon:hover {
+.icon {
+    width: 26px;
+    height: 26px;
+    filter: brightness(0) invert(1);
+}
+
+.icon-container:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4);
 }
@@ -141,12 +152,34 @@ body {
     gap: 20px;
 }
 
-.social-item {
+.social-item-linkedin {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background: #91f3da;
+    background: #0072b1;
+    border-radius: 12px;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.social-item-github {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.social-item-whatsapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #25d366;
     border-radius: 12px;
     cursor: pointer;
     min-width: 120px;
@@ -162,10 +195,22 @@ body {
     height: 40px;
     margin-bottom: 10px;
 }
+.social-icon-white {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1);
+}
 
 .social-label {
     font-weight: 500;
     font-size: 1em;
+}
+
+.social-label-white {
+    font-weight: 500;
+    font-size: 1em;
+    color: white;
 }
 
 /* Responsive design */
@@ -192,4 +237,29 @@ body {
         width: 150px;
         height: 150px;
     }
+}
+
+/* Footer de licencia */
+.footer-section {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.license-text {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.created-text {
+    font-size: 0.8em;
+    color: #999;
+    font-style: italic;
 }
