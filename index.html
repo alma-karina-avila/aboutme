@@ -19,7 +19,9 @@
         <!-- Segunda sección: Información de contacto -->
         <section class="contact-section">
             <div class="contact-item">
-                <img src="images/phone-icon.svg" alt="Teléfono" class="icon">
+                <div class="icon-container">
+                    <img src="images/phone-icon.svg" alt="Teléfono" class="icon">
+                </div>
                 <div class="contact-text">
                     <div class="contact-title">Teléfono</div>
                     <div class="contact-info">+52 442 386 9632</div>
@@ -27,7 +29,9 @@
             </div>
             
             <div class="contact-item">
-                <img src="images/email-icon.svg" alt="Email" class="icon">
+                <div class="icon-container">
+                    <img src="images/email-icon.svg" alt="Email" class="icon">
+                </div>
                 <div class="contact-text">
                     <div class="contact-title">Email</div>
                     <div class="contact-info">
@@ -37,7 +41,9 @@
             </div>
             
             <div class="contact-item">
-                <img src="images/pdf-icon.svg" alt="Descargar CV" class="icon">
+                <div class="icon-container" onclick="window.open('https://alma-karina-avila.github.io/aboutme/resources/CV-AlmaKarinaAvilaMacias-ES.pdf', '_blank')">
+                    <img src="images/pdf-icon.svg" alt="Descargar CV" class="icon">
+                </div>
                 <div class="contact-text">
                     <div class="contact-title">Currículum Vitae</div>
                     <div class="contact-info">
@@ -47,7 +53,9 @@
             </div>
             
             <div class="contact-item">
-                <img src="images/location-icon.svg" alt="Ubicación" class="icon">
+                <div class="icon-container">
+                    <img src="images/location-icon.svg" alt="Ubicación" class="icon">
+                </div>
                 <div class="contact-text">
                     <div class="contact-title">Ubicación</div>
                     <div class="contact-info">Querétaro, MX</div>
@@ -60,22 +68,30 @@
             <h3 class="section-title">Conecta Conmigo</h3>
             
             <div class="social-items">
-                <div class="social-item" onclick="window.open('https://linkedin.com/in/alma-karina-avila', '_blank')">
-                    <img src="images/linkedin-icon.svg" alt="LinkedIn" class="social-icon">
-                    <span class="social-label">LinkedIn</span>
+                <div class="social-item-linkedin" onclick="window.open('https://linkedin.com/in/alma-karina-avila', '_blank')">
+                    <img src="images/linkedin-icon.svg" alt="LinkedIn" class="social-icon-white">
+                    <span class="social-label-white">LinkedIn</span>
                 </div>
                 
-                <div class="social-item" onclick="window.open('https://github.com/alma-karina-avila', '_blank')">
+                <div class="social-item-github" onclick="window.open('https://github.com/alma-karina-avila', '_blank')">
                     <img src="images/github-icon.svg" alt="GitHub" class="social-icon">
                     <span class="social-label">GitHub</span>
                 </div>
                 
-                <div class="social-item" onclick="window.open('https://wa.me/4423869632', '_blank')">
+                <div class="social-item-whatsapp" onclick="window.open('https://wa.me/4423869632', '_blank')">
                     <img src="images/whatsapp-icon.svg" alt="WhatsApp" class="social-icon">
                     <span class="social-label">WhatsApp</span>
                 </div>
             </div>
         </section>
+        
+        <!-- Footer de licencia -->
+        <footer class="footer-section">
+            <div class="footer-content">
+                <p class="license-text">© 2026 Alma Karina Avila Macias.</p>
+                <p class="created-text">Desarrollado con ❤️ por Alma Karina</p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
