@@ -188,9 +188,30 @@ body {
 
 .social-item:hover {
     transform: translateY(-5px);
-    background: #dcfff6;
+    background: #000000;
+    box-shadow: 0 6px 20px #36b8b8;
 }
 
+.social-item:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.social-item-linkedin:hover {
+    transform: translateY(-5px);
+    background: #0299eb;
+    box-shadow: 0 6px 20px #36b8b8;
+}
+
+.social-item-whatsapp:hover {
+    transform: translateY(-5px);
+    background: #2af775;
+    box-shadow: 0 6px 20px #36b8b8;
+}
+
+.social-item:hover .social-label,
+.social-item:hover .social-label-white {
+    color: white;
+}
 .social-icon {
     width: 40px;
     height: 40px;
