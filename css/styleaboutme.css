@@ -54,6 +54,11 @@ body {
     opacity: 0.9;
     color: #b8fcfc;
 }
+.highlight-section {
+    background: #278888;
+    color: rgb(126, 23, 23);
+    padding: 5px 5px;
+}
 
 /* ===== SECCIÓN CONTACTO ===== */
 .contact-section {
