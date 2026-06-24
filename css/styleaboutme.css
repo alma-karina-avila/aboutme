@@ -1,3 +1,59 @@
+/* ===== VARIABLES CSS ROOT ===== */
+:root {
+    /* Colores Principales */
+    --color-primary: #1f6b6b;
+    --color-primary-light: #278888;
+    --color-primary-accent: #30b3b3;
+    --color-primary-text: #b8fcfc;
+    --color-primary-hover: #0299eb;
+    
+    /* Colores Secundarios */
+    --color-secondary: #230747;
+    --color-secondary-hover: #360269;
+    
+    /* Colores de Red Social */
+    --color-linkedin: #0072b1;
+    --color-whatsapp: #25d366;
+    --color-whatsapp-hover: #2af775;
+    --color-github: #ffffff;
+    
+    /* Colores de Fondo */
+    --color-bg-light: #e5e9e8;
+    --color-bg-contact: #f1e2ff;
+    --color-bg-white: #ffffff;
+    --color-bg-dark: #333;
+    
+    /* Colores de Texto */
+    --color-text-dark: #000000;
+    --color-text-light: #666;
+    --color-text-muted: #808080;
+    --color-text-link: #0b4438;
+    --color-text-footer: #ccc;
+    --color-text-footer-muted: #999;
+    
+    /* Colores de Sombra */
+    --color-shadow-light: #0000001a;
+    --color-shadow-medium: #00000033;
+    --color-shadow-dark: #0000004d;
+    --color-shadow-purple: #764ba24d;
+    --color-shadow-hover: #36b8b8;
+    
+    /* Tamaños de Fuente */
+    --font-size-xl: 3em;
+    --font-size-lg: 1.8em;
+    --font-size-md: 1.1em;
+    --font-size-sm: 0.9em;
+    --font-size-xs: 0.8em;
+    --font-size-base: 1em;
+    
+    /* Tamaños de Fuente Responsivos */
+    --font-size-responsive-name: 2em;
+    --font-size-responsive-title: 1.1em;
+    
+    /* Filtros */
+    --filter-invert: brightness(0) invert(1);
+}
+
 /* ===== ESTILOS GLOBALES ===== */
 * {
     margin: 0;
@@ -6,285 +62,236 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height:1.6;
+    background:#eef3f2;
+    padding:20px;
 }
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
 .container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
-    box-shadow: 0 0 20px #0000001a;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 0 20px var(--color-shadow-light);
 }
 
-/* ===== SECCIÓN HEADER ===== */
-.header-section {
-    background: #1f6b6b;
-    color: #000000;
-    padding: 40px 20px;
+/* ===== SECCIÓN HERO CARD ===== */
+.hero-card {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    padding:40px 30px;
     text-align: center;
 }
 
 .profile-photo {
-    width: 200px;
-    height: 200px;
+    width:120px;
+    height:120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #30b3b3;
-    box-shadow: 0 8px 32px #00000033;
+    border: 4px solid white;
+    box-shadow: 0 8px 32px var(--color-shadow-medium);
     margin: 0 auto;
     display: block;
+    transition: transform 0.3s ease;
+    
 }
 
 .profile-photo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 48px #0000004d;
+    transform: scale(1.08);
+    box-shadow: 0 12px 48px var(--color-shadow-dark);
 }
 
 .profile-name {
-    font-size: 3em;
+    line-height:1.2;
     font-weight: bold;
+    margin-top: 20px;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: white;
 }
 
 .professional-title {
-    font-size: 1.8em;
+    font-size: 1.2em;
     font-weight: 500;
-    opacity: 0.9;
-    color: #b8fcfc;
-}
-.highlight-section {
-    background: #278888;
-    color: rgb(126, 23, 23);
-    padding: 5px 5px;
+    opacity: 0.95;
+    color: var(--color-primary-text);
 }
 
-/* ===== SECCIÓN CONTACTO ===== */
+.profile-description {
+    max-width: 500px;
+    margin: 20px auto 0;
+    color: white;
+    opacity: 0.95;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* ===== SECCIÓN CONTACTO SIMPLIFICADA ===== */
 .contact-section {
-    background: #e5e9e8;
-    color: black;
-    padding: 30px 20px;
-}
-
-.section-title {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 20px;
-    text-align: center;
-    text-shadow: 1px 1px 3px #0000004d;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-    padding: 15px;
     background: white;
-    border-radius: 12px;
+    color: black;
+    padding: 0;
+    position:relative;
 }
 
-.contact-item:hover {
-    background: #f1e2ff;
-    transform: translateY(-2px);
+.contact-section::before{
+    content:"";
+    display:block;
+    width:80px;
+    height:3px;
+    background:var(--color-primary-accent);
+    margin:0 auto;
+}
+.contact-list {
+    padding: 30px;
 }
 
-.icon-container {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    background: #230747;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px #764ba24d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.contact-row {
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95em;
 }
 
-.icon-container:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px #360269;
-}
-
-.icon {
-    width: 26px;
-    height: 26px;
-    filter: brightness(0) invert(1);
-}
-
-.contact-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-}
-
-.contact-title {
-    font-size: 0.9em;
-    font-weight: 600;
-    color: #808080;
-    letter-spacing: 0.5px;
-}
-
-.contact-info {
-    font-size: 1.1em;
-    color: #666;
-    line-height: 1.4;
-    font-weight: bold;
+.contact-row:last-child {
+    border-bottom: none;
 }
 
 .contact-link {
-    color: #0b4438;
+    color: var(--color-primary);
     text-decoration: none;
-    border-bottom: 1px dotted #ffffff80;
+    font-weight: 600;
+    transition: opacity 0.2s;
 }
 
 .contact-link:hover {
-    border-bottom: 1px solid white;
+    opacity: 0.8;
 }
 
-/* ===== SECCIÓN REDES SOCIALES ===== */
-.social-section {
-   background: #1f6b6b;
-    padding: 30px 20px;
-}
-
-.social-items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.social-item-linkedin {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background: #0072b1;
-    border-radius: 12px;
-    cursor: pointer;
-    min-width: 120px;
-}
-
-.social-item-github {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 12px;
-    cursor: pointer;
-    min-width: 120px;
-}
-
-.social-item-whatsapp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background: #25d366;
-    border-radius: 12px;
-    cursor: pointer;
-    min-width: 120px;
-}
-
-.social-item:hover {
-    transform: translateY(-5px);
-    background: #000000;
-    box-shadow: 0 6px 20px #36b8b8;
-}
-
-.social-item:hover img {
-    filter: brightness(0) invert(1);
-}
-
-.social-item-linkedin:hover {
-    transform: translateY(-5px);
-    background: #0299eb;
-    box-shadow: 0 6px 20px #36b8b8;
-}
-
-.social-item-whatsapp:hover {
-    transform: translateY(-5px);
-    background: #2af775;
-    box-shadow: 0 6px 20px #36b8b8;
-}
-
-.social-item:hover .social-label,
-.social-item:hover .social-label-white {
-    color: white;
-}
-.social-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-}
-
-.social-icon-white {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-    filter: brightness(0) invert(1);
-}
-
-.social-label {
-    font-weight: 500;
-    font-size: 1em;
-}
-
-.social-label-white {
-    font-weight: 500;
-    font-size: 1em;
-    color: white;
-}
-
-/* ===== SECCIÓN AGREGAR CONTACTO ===== */
-.add-contact-section {
-    background: #e5e9e8;
-    padding: 30px 20px;
-    text-align: center;
-}
-
-.add-contact-item {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
+/* ===== SECCIÓN HABILIDADES ===== */
+.skills-section {
     padding: 20px 30px;
-    background: #230747;
-    box-shadow: 0 4px 12px #764ba24d;
-    border-radius: 12px;
-    cursor: pointer;
-    min-width: 150px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.skills-section h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: #f2f4f5;
+    color: var(--color-text-dark);
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
 }
 
-.add-contact-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px #360269;
-}
-
-.add-contact-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-    filter: brightness(0) invert(1);
-}
-
-.add-contact-label {
-    font-weight: 500;
-    font-size: 1em;
+.skill-tag:hover {
+    background: var(--color-primary);
     color: white;
+}
+
+/* ===== SECCIÓN CV ===== */
+.cv-section {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 30px;
+    border-top: 1px solid #eee;
+    flex-wrap: wrap;
+}
+
+.cv-button {
+    background: white;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 12px;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width:180px;
+    text-align:center;
+}
+
+.cv-button:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--color-shadow-purple);
+}
+
+/* ===== SECCIÓN REDES SOCIALES MODERNA ===== */
+.social-section {
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 30px 40px;
+    border-top: 1px solid #eee;
+}
+
+.social-link {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.linkedin-link {
+    background: var(--color-linkedin);
+}
+
+.github-link {
+    background:#f5f5f5;
+    border:none;
+    border: 2px solid var(--color-primary);
+}
+
+.whatsapp-link {
+    background: var(--color-whatsapp);
+}
+
+.vcard-link {
+    background: var(--color-primary-accent);
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(31, 107, 107, 0.3);
+}
+
+.social-icon-small {
+    width: 32px;
+    height: 32px;
 }
 
 /* ===== SECCIÓN FOOTER ===== */
 .footer-section {
-    background: #333;
-    color: white;
+    background: #fafafa;
+    color: #777;
     padding: 20px;
     text-align: center;
+    border-top: 1px solid #eee;
 }
 
 .footer-content {
@@ -293,39 +300,90 @@ body {
 }
 
 .license-text {
-    font-size: 0.9em;
+    font-size: 0.85rem;
     margin-bottom: 10px;
-    color: #ccc;
 }
 
 .created-text {
-    font-size: 0.8em;
-    color: #999;
+    font-size: 0.8rem;
     font-style: italic;
 }
 
 /* ===== DISEÑO RESPONSIVO ===== */
 @media (max-width: 600px) {
+    .hero-card {
+        padding: 40px 20px;
+    }
+    
     .profile-name {
-        font-size: 2em;
+        font-size: 1.8em;
+        margin-top: 15px;
     }
     
     .professional-title {
-        font-size: 1.1em;
+        font-size: 1em;
     }
     
-    .social-items {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .social-item {
-        width: 100%;
-        max-width: 200px;
+    .profile-description {
+        font-size: 0.9em;
     }
     
     .profile-photo {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
+    }
+    
+    .contact-list {
+        padding: 20px;
+    }
+    
+    .contact-row {
+        padding: 10px 0;
+        font-size: 0.9em;
+    }
+    
+    .skills-section {
+        padding: 15px 20px;
+    }
+    
+    .skills-section h3 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+    
+    .skills-container {
+        gap: 8px;
+    }
+    
+    .skill-tag {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .cv-section {
+        gap: 10px;
+        padding: 20px;
+    }
+    
+    .cv-button {
+        padding: 12px 20px;
+        font-size: 0.9em;
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .social-section {
+        gap: 15px;
+        padding: 15px 20px 25px;
+    }
+    
+    .social-link {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .social-icon-small {
+        width: 28px;
+        height: 28px;
     }
 }

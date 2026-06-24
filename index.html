@@ -9,99 +9,65 @@
 </head>
 <body>
     <div class="container">
-        <!-- Secci&oacute;n de foto personal -->
-    
-        <section class="header-section">
-            <img src="images/profile-photo.png" alt="Foto de Alma Karina" class="profile-photo">
-            <div class="highlight-section">
-                <!-- Primera secci&oacute;n: Header -->
-                <h1 class="profile-name">Alma Karina Avila Macias</h1>
-                <h2 class="professional-title">Desarrollador Full Stack, Backend Software Engineer, Java, Desarrollo a la
-                    medida </h2>
-            </div>
+        <!-- Hero Card: Encabezado Principal -->
+        <section class="hero-card">
+            <img src="images/profile-photo.png" alt="Alma Karina" class="profile-photo">
+            <h1 class="profile-name">Alma Karina Avila Macias</h1>
+            <p class="professional-title">Full Stack Developer | Backend Software Engineer</p>
+            <p class="profile-description">Ingeniera de Software especializada en Java, Spring Boot y desarrollo de soluciones escalables.</p>
         </section>
 
-        <!-- Segunda secci&oacute;n: Informaci&oacute;n de contacto -->
+        <!-- Información de Contacto Simplificada -->
         <section class="contact-section">
-            <div class="contact-item">
-                <div class="icon-container">
-                    <img src="images/phone-icon.svg" alt="Tel&eacute;fono" class="icon">
-                </div>
-                <div class="contact-text">
-                    <div class="contact-title">Tel&eacute;fono</div>
-                    <div class="contact-info">+52 442 386 9632</div>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <div class="icon-container">
-                    <img src="images/email-icon.svg" alt="Email" class="icon">
-                </div>
-                <div class="contact-text">
-                    <div class="contact-title">Email</div>
-                    <div class="contact-info">
-                        <a href="mailto:avilamacias.ak@gmail.com" class="contact-link">avilamacias.ak@gmail.com</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <div class="icon-container" onclick="window.open('https://alma-karina-avila.github.io/aboutme/resources/CV-AlmaKarinaAvilaMacias-ES.pdf', '_blank', 'noopener,noreferrer')">
-                    <img src="images/pdf-icon.svg" alt="Descargar CV" class="icon">
-                </div>
-                <div class="contact-text">
-                    <div class="contact-title">Curr&iacute;culum Vitae</div>
-                    <div class="contact-info">
-                        <a href="https://alma-karina-avila.github.io/aboutme/resources/CV-AlmaKarinaAvilaMacias-ES.pdf" target="_blank" rel="noopener noreferrer" class="contact-link">CV-Alma_Karina_Avila_Macias.pdf</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <div class="icon-container">
-                    <img src="images/location-icon.svg" alt="Ubicaci&oacute;n" class="icon">
-                </div>
-                <div class="contact-text">
-                    <div class="contact-title">Ubicaci&oacute;n</div>
-                    <div class="contact-info">Quer&eacute;taro, MX</div>
-                </div>
+            <div class="contact-list">
+                <div class="contact-row">📱 +52 442 386 9632</div>
+                <div class="contact-row">✉️ <a href="mailto:avilamacias.ak@gmail.com" class="contact-link">avilamacias.ak@gmail.com</a></div>
+                <div class="contact-row">📍 Querétaro, México</div>
             </div>
         </section>
 
-        <!-- Tercera secci&oacute;n: Redes sociales -->
+        <!-- Sección de Habilidades -->
+        <section class="skills-section">
+            <h3>Habilidades</h3>
+            <div class="skills-container">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">APIs REST</span>
+                <span class="skill-tag">Microservicios</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Git</span>
+            </div>
+        </section>
+
+        <!-- Botones de CV -->
+        <section class="cv-section">
+            <a href="https://alma-karina-avila.github.io/aboutme/resources/CV-AlmaKarinaAvilaMacias-ES-2026.pdf" target="_blank" rel="noopener noreferrer" class="cv-button">CV Español</a>
+            <a href="https://alma-karina-avila.github.io/aboutme/resources/CV-AlmaKarinaAvilaMacias-EN-2026.pdf" target="_blank" rel="noopener noreferrer" class="cv-button">CV English</a>
+        </section>
+
+        <!-- Redes Sociales -->
         <section class="social-section">
-            <h3 class="section-title">Conecta Conmigo</h3>
-            
-            <div class="social-items">
-                <div class="social-item social-item-linkedin" onclick="window.open('https://linkedin.com/in/alma-karina-avila', '_blank')">
-                    <img src="images/linkedin-icon.svg" alt="LinkedIn" class="social-icon-white">
-                    <span class="social-label-white">LinkedIn</span>
-                </div>
-                
-                <div class="social-item social-item-github" onclick="window.open('https://github.com/alma-karina-avila', '_blank')">
-                    <img src="images/github-icon.svg" alt="GitHub" class="social-icon">
-                    <span class="social-label">GitHub</span>
-                </div>
-                
-                <div class="social-item social-item-whatsapp" onclick="window.open('https://wa.me/4423869632', '_blank')">
-                    <img src="images/whatsapp-icon.svg" alt="WhatsApp" class="social-icon-white">
-                    <span class="social-label-white">WhatsApp</span>
-                </div>
-            </div>
+            <a href="https://linkedin.com/in/alma-karina-avila" target="_blank" rel="noopener noreferrer" class="social-link linkedin-link">
+                <img src="images/linkedin-icon.svg" alt="LinkedIn" class="social-icon-small">
+            </a>
+            <a href="https://github.com/alma-karina-avila" target="_blank" rel="noopener noreferrer" class="social-link github-link">
+                <img src="images/github-icon.svg" alt="GitHub" class="social-icon-small">
+            </a>
+            <a href="https://wa.me/4423869632" target="_blank" rel="noopener noreferrer" class="social-link whatsapp-link">
+                <img src="images/whatsapp-icon.svg" alt="WhatsApp" class="social-icon-small">
+            </a>
+            <a href="resources/vcardkarinaavila.vcf" target="_blank" rel="noopener noreferrer" class="social-link vcard-link">
+                <img src="images/add-user.svg" alt="Agregar Contacto" class="social-icon-small">
+            </a>
         </section>
-        <!-- Cuarta secci&oacute;n: Agregar contacto -->
-        <section class="add-contact-section">
-            <div class="add-contact-item" onclick="window.open('resources/vcardkarinaavila.vcf', '_blank')">
-                <img src="images/add-user.svg" alt="Agregar Contacto" class="add-contact-icon">
-                <span class="add-contact-label">Agregar Contacto</span>
-            </div>
-        </section>
+			
+			
          
         <!-- Footer de licencia -->
         <footer class="footer-section">
             <div class="footer-content">
                 <p class="license-text">© 2026 Alma Karina Avila Macias.</p>
-                <p class="created-text">Desarrollado con ❤️ por Alma Karina</p>
             </div>
         </footer>
     </div>
